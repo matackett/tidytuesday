@@ -18,6 +18,8 @@ library(readr)
 
 ## The Data
 
+The original data is from [The Vera Institute GitHub](https://github.com/vera-institute/incarceration_trends); the `prison_population` dataset used in this analysis was prepared by the [#TidyTuesday](https://github.com/rfordatascience/tidytuesday) team. Please see the README for more details about the data.
+
 
 ```r
 #pretrial by race by area
