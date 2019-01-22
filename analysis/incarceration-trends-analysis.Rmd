@@ -115,7 +115,6 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=prison_perc,fill=pop_category)) +
 ggsave("incarcerated-pop.png")
 ```
 
-## Additional Analysis
 
 ```{r include = FALSE, eval = FALSE}
 ggplot(data=pop_summary,mapping=aes(x=year,y=ratio,fill=pop_category)) + 
@@ -132,8 +131,7 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=ratio,fill=pop_category)) +
               plot.subtitle = element_text(hjust=0.5))
 ```
 
-Below is a plot of the population over time.
-```{r}
+```{r include=FALSE, eval = FALSE}
 pop_summary %>%
   group_by(region,year) %>%
   summarise(total_population = sum(pop_tot)) %>%
