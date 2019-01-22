@@ -83,7 +83,7 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=pop_perc,fill=pop_category)) +
   labs(title = "General Population: Distribution of Race",
        subtitle = "by Region", 
        x = "Year",
-       y = "% of General Population",
+       y = "Proportion of General Population",
        fill="Race") + 
   theme_light()+
   theme(plot.title = element_text(hjust=0.5), 
@@ -103,7 +103,7 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=prison_perc,fill=pop_category)) +
   labs(title = "Incarcerated Population: Distribution of Race",
        subtitle = "by Region", 
        x = "Year",
-       y = "% of Incarcerated Population",
+       y = "Proportion of Incarcerated Population",
        fill="Race") + 
   theme_light()+
   theme(plot.title = element_text(hjust=0.5), 
