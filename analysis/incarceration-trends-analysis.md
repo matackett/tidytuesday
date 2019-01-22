@@ -82,7 +82,7 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=pop_perc,fill=pop_category)) +
   geom_area(position="fill") + 
   facet_wrap(~region) +
   scale_fill_brewer(palette = "Dark2") + 
-  labs(title = "Distribution of Race in the General Population",
+  labs(title = "General Population: Distribution of Race",
        subtitle = "by Region", 
        x = "Year",
        y = "% of General Population",
@@ -106,7 +106,7 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=prison_perc,fill=pop_category)) +
  geom_area(position="fill") + 
   facet_wrap(~region) +
   scale_fill_brewer(palette = "Dark2") + 
-  labs(title = "Distribution of Race in the Incarcerated Population",
+  labs(title = "Incarcerated Population: Distribution of Race",
        subtitle = "by Region", 
        x = "Year",
        y = "% of Incarcerated Population",
@@ -124,19 +124,8 @@ ggplot(data=pop_summary,mapping=aes(x=year,y=prison_perc,fill=pop_category)) +
 ggsave("incarcerated-pop.png")
 ```
 
-## Additional Analysis
 
 
 
-Below is a plot of the population over time.
 
-```r
-pop_summary %>%
-  group_by(region,year) %>%
-  summarise(total_population = sum(pop_tot)) %>%
-  ggplot(mapping=aes(x=year,y=total_population,color=region)) + 
-  geom_line() 
-```
-
-![](incarceration-trends-analysis_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
